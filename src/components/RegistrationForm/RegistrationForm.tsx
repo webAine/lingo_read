@@ -54,12 +54,12 @@ const RegistrationForm = () => {
     <form onSubmit={handleSubmitRegisterForm}>
       <InputField type='text' placeholder='Name' value={name} onChange={(e) => setName(e.target.value)} />
       <InputField type='email' placeholder='Email' value={email} onChange={(e) => setEmail(e.target.value)} />
-      <SelectLanguage languages={languages} value={nativeLanguage} onChange={(e) => setNativeLanguage(e.target.value)} />
-      <SelectLanguage languages={languages} value={learningLanguage} onChange={(e) => setLearningLanguage(e.target.value)} />
+      <SelectLanguage choose='choose native language' languages={languages} value={nativeLanguage} onChange={(e) => setNativeLanguage(e.target.value)} />
+      <SelectLanguage choose='choose learning language' languages={languages} value={learningLanguage} onChange={(e) => setLearningLanguage(e.target.value)} />
       <InputField type='password' placeholder='Password' value={password} onChange={(e) => setPassword(e.target.value)} />
       <InputField type='password' placeholder='Confirm Password' value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
       <button type='submit' disabled={loading}>
-        {loading ? 'Loading...' : 'Enter'}
+        {loading ? 'Loading...' : 'Registration'}
       </button>
       {error && <p style={{ color: 'red' }}>{error}</p>}
     </form>

@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router';
-import RegisterPage from './pages/RegisterPage';
+import AuthPage from './pages/AuthPage';
 import Home from './pages/Home';
 import GlobalStyle from './styles/GlobalStyles';
 
@@ -7,10 +7,10 @@ const App = () => {
   return (
     <>
       <GlobalStyle />
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/registration' element={<RegisterPage />} />
-        </Routes>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/auth' element={<AuthPage />} />
+      </Routes>
     </>
   );
 };
