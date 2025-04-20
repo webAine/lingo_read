@@ -4,18 +4,15 @@ import { UserData } from '../../types/userType';
 import { doc, setDoc, Timestamp } from 'firebase/firestore';
 
 const validateUserData = (userData: UserData): string | null => {
-  // Проверка формата email
   const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
   if (!emailPattern.test(userData.email)) {
     return 'Invalid email format';
   }
 
-  // Проверка длины пароля
   if (userData.password.length < 6) {
     return 'Password must be at least 6 characters long';
   }
 
-  // Проверка совпадения паролей
   if (userData.password !== userData.confirmPassword) {
     return 'Passwords do not match';
   }
