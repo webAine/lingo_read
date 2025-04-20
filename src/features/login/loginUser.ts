@@ -1,9 +1,9 @@
-import { signInWithEmailAndPassword, getAuth } from 'firebase/auth';
+import { signInWithEmailAndPassword } from 'firebase/auth';
+import { auth } from '../../../firebase/firebase';
 import { LoginResult } from '../../types/userType';
 
 export const loginUser = async (email: string, password: string): Promise<LoginResult> => {
   try {
-    const auth = getAuth();
     const userCredential = await signInWithEmailAndPassword(auth, email, password);
 
     return { user: userCredential.user, error: null };
