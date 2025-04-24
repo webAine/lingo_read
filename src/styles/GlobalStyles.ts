@@ -9,9 +9,16 @@ const GlobalStyle = createGlobalStyle`
 
   html, body {
     height: 100%;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #fff;
-    color: #000;
+    font-family: ${({ theme }) => theme.fonts.body};
+    color: ${({ theme }) => theme.colors.text};
+    background-color: ${({ theme }) => theme.colors.background};
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  h1, h2, h3 {
+    font-family: ${({ theme }) => theme.fonts.heading};
+    color: ${({ theme }) => theme.colors.heading};
   }
 
   a {
@@ -27,7 +34,7 @@ const GlobalStyle = createGlobalStyle`
     background: none;
     border: none;
     cursor: pointer;
-    font: inherit;
+    font-family: ${({ theme }) => theme.fonts.button};
   }
 
   img {

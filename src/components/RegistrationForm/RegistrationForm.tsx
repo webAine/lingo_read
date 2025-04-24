@@ -56,8 +56,8 @@ const RegistrationForm = () => {
 
   return (
     <form onSubmit={handleSubmitRegisterForm}>
-      <InputField type='text' placeholder='Name' value={name} onChange={(e) => setName(e.target.value)} />
-      <InputField type='email' placeholder='Email' value={email} onChange={(e) => setEmail(e.target.value)} />
+      <InputField type='text' label='Name' value={name} onChange={(e) => setName(e.target.value)} />
+      <InputField type='email' label='Email' value={email} onChange={(e) => setEmail(e.target.value)} />
       <SelectLanguage
         choose='choose native language'
         languages={languages}
@@ -70,8 +70,8 @@ const RegistrationForm = () => {
         value={learningLanguage}
         onChange={(e) => setLearningLanguage(e.target.value)}
       />
-      <InputField type='password' placeholder='Password' value={password} onChange={(e) => setPassword(e.target.value)} />
-      <InputField type='password' placeholder='Confirm Password' value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
+      <InputField type='password' label='Password' value={password} onChange={(e) => setPassword(e.target.value)} />
+      <InputField type='password' label='Confirm Password' value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
       <button type='submit' disabled={loading}>
         {loading ? 'Loading...' : 'Registration'}
       </button>

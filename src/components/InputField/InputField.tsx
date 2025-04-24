@@ -1,12 +1,13 @@
-type InputFieldProps = {
-  type: 'text' | 'email' | 'password';
-  placeholder: string;
-  value: string;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-};
+import { InputFieldProps } from '../../types/inputAuthType';
+import { InputWrapper } from './styles';
 
-const InputField = ({ type, placeholder, value, onChange }: InputFieldProps) => {
-  return <input type={type} placeholder={placeholder} value={value} onChange={onChange} />;
+const InputField = ({ type, label, value, onChange }: InputFieldProps) => {
+  return (
+    <InputWrapper>
+      <input type={type} value={value} onChange={onChange} />
+      <label>{label}</label>
+    </InputWrapper>
+  );
 };
 
 export default InputField;

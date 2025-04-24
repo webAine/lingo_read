@@ -23,7 +23,7 @@ const LoginForm = () => {
 
       if (result.user) {
         console.log('User logged in successfully');
-        navigate('/')
+        navigate('/');
       } else {
         setError(result.error || null);
       }
@@ -38,12 +38,12 @@ const LoginForm = () => {
 
   return (
     <form onSubmit={handleSubmitLoginForm}>
-      <InputField type='email' placeholder='Email' value={email} onChange={(e) => setEmail(e.target.value)} />
-      <InputField type='password' placeholder='Password' value={password} onChange={(e) => setPassword(e.target.value)} />
+      <InputField type='email' label='Email' value={email} onChange={(e) => setEmail(e.target.value)} />
+      <InputField type='password' label='Password' value={password} onChange={(e) => setPassword(e.target.value)} />
       <button type='submit' disabled={loading}>
         {loading ? 'Loading...' : 'Login'}
       </button>
-      {error && <p style={{ color: 'red' }}>{error}</p>}
+      {error && <p className='error-message'>{error}</p>}
     </form>
   );
 };

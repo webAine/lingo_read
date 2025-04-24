@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import PrivateRoute from './PrivateRoute';
-import AuthPage from '../pages/AuthPage';
+import AuthPage from '../pages/AuthPage/AuthPage';
 import Home from '../pages/Home';
 
 const AppRouter = () => {
