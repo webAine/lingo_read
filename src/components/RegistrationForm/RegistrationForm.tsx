@@ -1,10 +1,39 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { registerUser } from '../../features/registration/registerUser';
+import { registerUser } from '../../features/auth/registration/registerUser';
 import InputField from '../InputField/InputField';
 import SelectLanguage from '../SelectLanguage/SelectLanguage';
 
-const languages = ['English', 'Spanish', 'French', 'German', 'Japanese'];
+const languages = [
+  'English',
+  'Spanish',
+  'French',
+  'German',
+  'Japanese',
+  'Italian',
+  'Portuguese',
+  'Dutch',
+  'Russian',
+  'Chinese',
+  'Arabic',
+  'Korean',
+  'Greek',
+  'Turkish',
+  'Swedish',
+  'Danish',
+  'Norwegian',
+  'Polish',
+  'Finnish',
+  'Hungarian',
+  'Czech',
+  'Hebrew',
+  'Romanian',
+  'Hindi',
+  'Bengali',
+  'Thai',
+  'Swahili',
+  'Vietnamese',
+];
 
 const RegistrationForm = () => {
   const [name, setName] = useState('');

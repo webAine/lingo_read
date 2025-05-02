@@ -1,6 +1,6 @@
 import { createUserWithEmailAndPassword } from 'firebase/auth';
-import { auth, db } from '../../../firebase/firebase';
-import { UserData } from '../../types/userType';
+import { auth, db } from '../../../../firebase/firebase';
+import { UserData } from '../../../types/userType';
 import { doc, setDoc, Timestamp } from 'firebase/firestore';
 
 const validateUserData = (userData: UserData): string | null => {

@@ -19,6 +19,7 @@ const GlobalStyle = createGlobalStyle`
   h1, h2, h3 {
     font-family: ${({ theme }) => theme.fonts.heading};
     color: ${({ theme }) => theme.colors.heading};
+    margin-bottom: 30px;
   }
 
   a {
@@ -41,6 +42,11 @@ const GlobalStyle = createGlobalStyle`
     max-width: 100%;
     height: auto;
     display: block;
+  }
+  .container {
+    padding: 50px 20px;
+    max-width: 1600px;
+    margin: 0 auto;
   }
 `;
 

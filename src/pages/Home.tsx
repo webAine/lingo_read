@@ -1,9 +1,11 @@
-import LogoutButton from '../components/LogoutButton/LogoutButton';
+import Books from '../components/Books/Books';
+import Header from '../components/Header/Header';
 
 const Home = () => {
   return (
     <div>
-      <LogoutButton />
+      <Header />
+      <Books />
     </div>
   );
 };

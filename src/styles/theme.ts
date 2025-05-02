@@ -4,6 +4,8 @@ export const theme = {
   colors: {
     background: '#f5f7ff',
     card: '#f2f3fe',
+    cardText: '#f1f1f1',
+    cardHeading: '#aad4f5',
     text: '#1f1f1f',
     heading: '#3e4095',
     accent: '#8f94fb',

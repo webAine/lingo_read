@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { loginUser } from '../../features/login/loginUser';
+import { loginUser } from '../../features/auth/login/loginUser';
 import InputField from '../InputField/InputField';
 
 const LoginForm = () => {

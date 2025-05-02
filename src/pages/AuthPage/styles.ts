@@ -18,13 +18,12 @@ export const FormWrapper = styled.div`
   }
 
   & h2 {
-    color: #fff;
     margin-bottom: 30px;
-    font-size: 37px;
-    line-height: 39px;
-    letter-spacing: 5px;
+    font-size: 43px;
+    line-height: 45px;
+
     font-family: ${({ theme }) => theme.fonts.title};
-    color: ${({ theme }) => theme.colors.accent};
+    color: ${({ theme }) => theme.colors.heading};
     text-align: center;
   }
 
@@ -41,7 +40,7 @@ export const FormWrapper = styled.div`
     color: ${({ theme }) => theme.colors.card};
     border-radius: 15px;
     display: block;
-    margin: 15px auto;
+    margin: 0 auto 20px auto;
     padding: 15px 25px;
     width: 100%;
     font-size: 16px;
